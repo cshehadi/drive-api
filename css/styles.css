@@ -24,7 +24,11 @@ h1 {
     text-align: center;
 }
 
-#document {
+#authorize-div {
+    text-align: center;
+}
+
+#output, #document {
     width: 8.5in;
     margin: 0 auto;
 }
