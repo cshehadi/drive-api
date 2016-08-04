@@ -1,0 +1,30 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+}
+
+.header {
+    border-bottom: thin solid #063e3e;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+}
+
+#toolbar {
+    text-align: center;
+}
+
+#document {
+    width: 8.5in;
+    margin: 0 auto;
+}
