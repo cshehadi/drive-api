@@ -32,3 +32,7 @@ h1 {
     width: 8.5in;
     margin: 0 auto;
 }
+#result {
+    max-width: 1024px;
+    margin: 60px auto 60px auto;
+}
