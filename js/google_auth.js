@@ -58,7 +58,7 @@
       }
 
     function handleImport(data) {
-        $('#result').html(data);
+        $('#submission').html(data);
     }
 
     function pickerCallback(data) {
@@ -77,7 +77,7 @@
                     success: handleImport 
                 });
         } else {
-            $('#result').html('<p><strong>Sorry</strong> - at this time we can only import documents that were <em>created</em> in Google Docs.  This document seems to have been created in another application and uploaded to Google Docs.</p>');
+            $('#submission').html('<p><strong>Sorry</strong> - at this time we can only import documents that were <em>created</em> in Google Docs.  This document seems to have been created in another application and uploaded to Google Docs.</p>');
 /*          // use this code to download a non-google doc.  You'll need some method to convert it to html
             gapi.client.load('drive', 'v3', function() {
                 var request = gapi.client.drive.files.get({

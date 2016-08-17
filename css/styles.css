@@ -9,15 +9,30 @@ html {
 body {
 }
 
+.panel-heading {
+    font-size: 20px;
+    font-family: BrandonGrotesque-Bold;
+}
+
+.assignment-metadata {
+    font-size: 14px;
+    font-family: BrandonGrotesque-Regular;
+    float: right;
+    padding-top: 6px;
+}
+
+
 .header {
-    border-bottom: thin solid #063e3e;
     padding: 1em;
     margin-bottom: 2em;
 }
 
 h1 {
     text-align: center;
-    font-family: 'PT Sans', sans-serif;
+}
+
+ol li {
+    font-size: 17px;
 }
 
 #toolbar {

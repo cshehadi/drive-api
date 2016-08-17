@@ -3,26 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <title>Google Drive API</title>
-    <link href='//fonts.googleapis.com/css?family=PT+Sans:700' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=PT+Serif:400,400italic' rel='stylesheet' type='text/css'>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+          crossorigin="anonymous">
+    <link href="fonts/webfonts.css" rel="stylesheet">
+    <link href="css/gotham_common.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
     <div class="header">
-        <h1>Display Google Doc as HTML.</h1>
+        <nav id="navigation" class="navbar-inverse navbar-fixed-top navbar">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w2-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><h1 class="col-md-3 col-xs-8" id="logo"><img id="logo-img" src="/img/gww-logo.svg" alt="Gotham Writers Workshop"></h1></a>
+                </div>
+                <div id="w2-collapse" class="collapse navbar-collapse">
+                    <ul id="main-nav" class="navbar-nav navbar-right nav">
+                        <li><a>My Desk</a></li>
+                        <li><a>Blackboard</a></li>
+                        <li class="active"><a href="index.html">Notebook</a></li>
+                        <li><a>Booth</a></li>
+                        <li><a>Resources</a></li>
+                        <li><a>Lounge</a></li>
+                        <li><a>Help</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
-    <div class="container">
-        <div id="authorize-div">
-            <span>Use the Google Picker to... </span>
-            <button id="pick-file">select a file</button>
+    <div class="container cms-page">
+        <div class="col-md-8 col-md-push-2 col-sm-10 col-sm-push-1">
+            <h1 class="page-header">Notebook - Week 2</h1>
+            <div id="submission"></div>
+            <div class="assignment panel panel-default">
+                <div class="panel-heading">Assignment: Character<div class="assignment-metadata">Assignment #2 - Due Before 7/26</div></div>
+                <div class="panel-body">
+                    <p>Knowing Your Characters</p>
+                    <ol>
+                        <li>Take the fiction piece (or idea) you're working on for Booth and, for the main character, come up with a list of qualities of the character you want to stress. Eg: moody, enthusiastic, combative.</li>
+                        <li>Then, for each quality, list five or more actions, phrases, descriptions or illuminating details that particularly demonstrate this quality for the character.</li>
+                        <li>Choose one action or detail, and write half a page (250 words) of a scene in which that action takes place, or that detail is described, for this character. If possible, try your hand at both showing and telling the character in this scene.</li>
+                    </ol>
+                    <p>Turn in your lists of qualities, actions/details and the half-page scene.</p>
+                    <p>Try to keep it under 500 words, with 750 words as a maximum.</p>
+                </div>
+                <div id="authorize-div">
+                    <span>Import your assignment from Google Drive: </span>
+                    <button id="pick-file">select a file</button>
+                </div>
+            </div>
         </div>
-        <p id="result"></p>
     </div>
     <script src="//code.jquery.com/jquery.min.js"></script>
-    <script type="text/javascript" src="https://apis.google.com/js/api.js"></script>
-    <script type="text/javascript" src="js/google_auth.js"></script>
+    <script src="//apis.google.com/js/api.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+            crossorigin="anonymous"></script>
+    <script src="js/google_auth.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
