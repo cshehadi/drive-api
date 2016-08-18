@@ -9,19 +9,6 @@ html {
 body {
 }
 
-.panel-heading {
-    font-size: 20px;
-    font-family: BrandonGrotesque-Bold;
-}
-
-.assignment-metadata {
-    font-size: 14px;
-    font-family: BrandonGrotesque-Regular;
-    float: right;
-    padding-top: 6px;
-}
-
-
 .header {
     padding: 1em;
     margin-bottom: 2em;
@@ -35,19 +22,33 @@ ol li {
     font-size: 17px;
 }
 
-#toolbar {
-    text-align: center;
+/* assignment panel */
+.panel-heading {
+    padding-top: 16px;
+    font-size: 20px;
+    font-family: BrandonGrotesque-Bold;
 }
 
-#authorize-div {
-    text-align: center;
+.panel-footer {
+    padding-top: 20px;
 }
 
-#output, #document {
-    width: 8.5in;
-    margin: 0 auto;
+.assignment-metadata {
+    font-size: 14px;
+    font-family: BrandonGrotesque-Regular;
+    float: right;
+    padding-top: 6px;
 }
-#result {
+
+div#submission {
     max-width: 1024px;
-    margin: 60px auto 60px auto;
+    margin-bottom: 2em;
+}
+
+div#sandbox {
+    display: none;
+}
+
+div#authorize {
+    text-align: center;
 }
