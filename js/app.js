@@ -75,7 +75,9 @@ $(document).ready(function() {
                     success: handleGoogleDocImport 
                 });
         } else { // ms word doc - or other document type - for now throw an error
-            $('#submission').html('<p><strong>Sorry</strong> - at this time we can only import documents that were <em>created</em> in Google Docs.  This document seems to have been created in another application and uploaded to Google Docs.</p>');
+            var headline = 'Sorry';
+            var message = 'At this time we can only import documents that were <em>created</em> in Google Docs.  This document seems to have been created in another application and uploaded to Google Docs.  Please try another document.';
+            displayError(headline, message);
 /*          // use this code to download a non-google doc.  You'll need some method to convert it to html
             gapi.client.load('drive', 'v3', function() {
                 var request = gapi.client.drive.files.get({
@@ -87,6 +89,17 @@ $(document).ready(function() {
             }); */
         }
       }
+    }
+
+
+    function displayError(headline, message) {
+        $('#error').html('<p><strong>'+headline+'</strong><br>'+message+'</p>');
+        $('#error').show();
+    }
+
+    function clearError() {
+        $('#error').hide();
+        $('#error').html('');
     }
 
     /* functions for handling the import */
@@ -155,7 +168,12 @@ $(document).ready(function() {
     /*** EVENT HANDLERS ***/
 
     $('#pick-file').click(function() {
-        onApiLoad();
+        clearError();
+        if(typeof gapi.client === 'object') {
+            onPickerApiLoad();
+        } else {
+            onApiLoad();
+        }
     });
 
     $('#delete-submission').click(function() {

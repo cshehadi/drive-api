@@ -45,7 +45,13 @@ div#submission-wrapper {
     margin-bottom: 2em;
     display: none;
 }
-
+button#delete-submission {
+    margin-top: 0px;
+}
+div#error {
+    color: tomato;
+    display: none;
+}
 div#sandbox {
     display: none;
 }
