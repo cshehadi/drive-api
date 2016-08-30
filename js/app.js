@@ -45,11 +45,14 @@ $(document).ready(function() {
       // Create and render a Picker object for picking user Photos.
       function createPicker() {
         if (pickerApiLoaded && oauthToken) {
-          var picker = new google.picker.PickerBuilder().
-              addView(google.picker.ViewId.DOCUMENTS).
-              setOAuthToken(oauthToken).
-              setCallback(pickerCallback).
-              build();
+          var view = new google.picker.DocsView(google.picker.ViewId.DOCUMENTS)
+              .setMode(google.picker.DocsViewMode.GRID);
+          var picker = new google.picker.PickerBuilder()
+              .addView(view)
+              .enableFeature(google.picker.Feature.NAV_HIDDEN)
+              .setOAuthToken(oauthToken)
+              .setCallback(pickerCallback)
+              .build();
           picker.setVisible(true);
         }
       }
@@ -146,11 +149,17 @@ $(document).ready(function() {
     function handleGoogleDocImport(data) {
         var html = generateStyles(data);
         $('#submission').append(html);
+        $('#submission-wrapper').show();
     }
 
     /*** EVENT HANDLERS ***/
 
     $('#pick-file').click(function() {
         onApiLoad();
+    });
+
+    $('#delete-submission').click(function() {
+        $('#submission').html('');
+        $('#submission-wrapper').hide();
     });
 });

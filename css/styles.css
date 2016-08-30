@@ -40,9 +40,10 @@ ol li {
     padding-top: 6px;
 }
 
-div#submission {
+div#submission-wrapper {
     max-width: 1024px;
     margin-bottom: 2em;
+    display: none;
 }
 
 div#sandbox {
