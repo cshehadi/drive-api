@@ -43,10 +43,14 @@ ol li {
 div#submission-wrapper {
     max-width: 1024px;
     margin-bottom: 2em;
+    position: relative;
     display: none;
 }
-button#delete-submission {
-    margin-top: 0px;
+a#delete-submission {
+    position: absolute;
+    right: 0px;
+    top: -65px;
+
 }
 div#error {
     color: tomato;

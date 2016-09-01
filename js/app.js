@@ -102,6 +102,11 @@ $(document).ready(function() {
         $('#error').html('');
     }
 
+    function clearSubmission() {
+        $('#submission').html('');
+        $('#submission-wrapper').hide();
+    }
+
     /* functions for handling the import */
 
 
@@ -169,6 +174,7 @@ $(document).ready(function() {
 
     $('#pick-file').click(function() {
         clearError();
+        clearSubmission();
         if(typeof gapi.client === 'object') {
             onPickerApiLoad();
         } else {
@@ -177,7 +183,6 @@ $(document).ready(function() {
     });
 
     $('#delete-submission').click(function() {
-        $('#submission').html('');
-        $('#submission-wrapper').hide();
+        clearSubmission();
     });
 });
