@@ -30,7 +30,7 @@ $(document).ready(function() {
           }).then(function () {
             auth2 = gapi.auth2.getAuthInstance();
             auth2.signIn().then(function () {
-                oauthToken = auth2.currentUser.get().hg.access_token; // save the oauthtoken - you'll need it soon
+                oauthToken = auth2.currentUser.get().getAuthResponse().access_token; // save the oauthtoken - you'll need it soon
                 onPickerApiLoad();
             });
           });
